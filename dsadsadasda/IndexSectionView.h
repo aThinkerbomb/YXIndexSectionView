@@ -35,9 +35,9 @@
 @property (nonatomic, strong) UIColor *IndexSectionViewBackgroundColor;
 
 /**
- *  设置每一块按钮的颜色，default is clearColor
+ *  设置触摸点颜色，default is clearColor
  */
-@property (nonatomic, strong) UIColor *IndexSectionTitleBackgroundColor;
+@property (nonatomic, strong) UIColor *fingerColor;
 @property (nonatomic, assign) id<IndexSectionVIewDelegate>delegate;
 
 /**
@@ -45,4 +45,9 @@
  */
 - (void)setIndexSectionTitles:(NSArray<NSString *> *)array;
 
+/**
+ *  设置检索栏单元格颜色
+ *  几个indexpath 就几个color
+ */
+- (void)setIndexSectionViewBackground:(NSArray<UIColor *> *)colors withIndexPath:(NSArray<NSString *>*)indexs;
 @end
